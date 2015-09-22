@@ -36,13 +36,13 @@ namespace StringCalculator
         public void Add()
         {
             StringCalculator source = new StringCalculator();
-            source.Add("0,1,2");
+            int result = source.Add("0,1,2");
 
-            StringCalculator destination = new StringCalculator();
-            destination.Add("0,1");
+            StringCalculator source2 = new StringCalculator();
+            int result2 = source2.Add("0,1");
 
-            Assert.AreEqual(3, source.Add);
-            Assert.AreEqual(1, source.Add);
+            Assert.AreEqual(3, result);
+            Assert.AreEqual(1, result2);
         }
     }
 }
