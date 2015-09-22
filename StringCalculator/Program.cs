@@ -33,18 +33,25 @@ namespace StringCalculator
     public class StringCalculatorTest
     {
         [Test]
-        public void TestOneNumber()
+        public void EmptyString()
+        {
+            StringCalculator source = new StringCalculator();
+            int result = source.Add("");
+            Assert.AreEqual(0, result);
+        }
+        [Test]
+        public void OneNumber()
         {
             StringCalculator source = new StringCalculator();
             int result = source.Add("1");
             Assert.AreEqual(1, result);
         }
         [Test]
-        public void TestSumOfTwo()
+        public void TwoNumbers()
         {
             StringCalculator source = new StringCalculator();
-            int result = source.Add("0,1");
-            Assert.AreEqual(1, result);
+            int result = source.Add("1,2");
+            Assert.AreEqual(3, result);
         }
     }
 }
