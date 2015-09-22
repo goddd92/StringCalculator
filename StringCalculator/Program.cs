@@ -37,12 +37,10 @@ namespace StringCalculator
         {
             StringCalculator source = new StringCalculator();
             int result = source.Add("0,1,2");
-
-            StringCalculator source2 = new StringCalculator();
-            int result2 = source2.Add("0,1");
-
             Assert.AreEqual(3, result);
-            Assert.AreEqual(1, result2);
+
+            result = source.Add("0,1");
+            Assert.AreEqual(1, result);
         }
     }
 }
